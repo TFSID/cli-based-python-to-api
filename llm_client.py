@@ -187,5 +187,7 @@ class LLMClient:
             return result["text"]
         elif "content" in result:
             return result["content"]
+        elif "output_text" in result:
+            return result["output_text"]
         else:
             return str(result)
